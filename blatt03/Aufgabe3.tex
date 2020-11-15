@@ -1,0 +1,72 @@
+\documentclass{article}
+
+\usepackage{amsmath, amssymb}
+\usepackage[margin=2.5cm]{geometry}
+
+\begin{document}
+
+\section*{Aufgabe 3}
+
+\subsection*{a)}
+
+Das System besteht aus 3 Massen, welche unter der Vorraussetzung,
+dass diese Punktartig sind, 9 Freiheitsgrade besitzen.
+
+\noindent
+Diese werden durch folgende Zwangsbedingungen eingeschränkt:
+\begin{itemize}
+	\item $m_2$ bewegt sich nur auf z-Achse 
+		$\Rightarrow x_2 = y_2$
+		\\
+		$\Rightarrow$ Holonome, skleronome Zwangsbedingung.
+	\item z-Koordinaten der Massen durch $\theta$ vorgegeben
+		\[
+			z_1 = R \cdot \cos\theta,
+			\quad
+			z_2 = 2R \cdot \cos\theta
+		\]
+		$\Rightarrow$ Holonome, rheonome Zwangsbedingung (da $\theta$
+		zeitabhängig sein kann)
+	\item Abstand der Massen $m_1$ zur Rotationsachse durch $\theta$ 
+		vorgegeben
+		\[
+			r_\perp = R \cdot \sin\theta
+		\]
+		$\Rightarrow$ Holonome, rheonome Zwangsbedingung (da $\theta$
+		zeitabhängig sein kann)
+	\item Ausrichtung der $m_1$ durch Rotation $\varphi := \omega t$ eingeschränkt
+		\[
+			\vec m_1 = R \cdot cos\theta \cdot \vec e_z
+			\pm r_\perp \cdot
+			\begin{pmatrix} \cos\varphi \\ \sin\varphi \\ 0 \end{pmatrix}
+			% darstellung alles in einem vektor
+			= R \cdot 
+			\begin{pmatrix}
+				\pm \sin\theta \cos(\omega t) \\
+				\pm \sin\theta \sin(\omega t) \\
+				\cos\theta
+			\end{pmatrix}
+		\]
+		$\Rightarrow$ Holonome, rheonome Zwangsbedingung.
+\end{itemize}
+
+Somit lauten die Ortsvektoren:
+\[
+	\vec r_1
+			= R \cdot 
+			\begin{pmatrix}
+				\pm \sin\theta \cos(\omega t) \\
+				\pm \sin\theta \sin(\omega t) \\
+				\cos\theta
+			\end{pmatrix}
+	\qquad
+	\vec r_2 
+			= \cdot 
+			\begin{pmatrix}
+				0 \\
+				0 \\
+				2R \cdot  \cos\theta
+			\end{pmatrix}
+\]
+
+\end{document}
